@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="h-screen bg-white dark:bg-black text-black dark:text-white overflow-hidden overflow-y-scroll relative">
       <Cursor />
-      <Header/>
+      <Header parentTheme= {theme}/>
       <button className="p-4 bg-green-400 rounded-3xl hidden" onClick={handleThemeSwitch}>Dark Mode</button>
     </div>
   )
