@@ -1,0 +1,43 @@
+import { useEffect, useState } from "react"
+
+function App() {
+
+  // set the theme to system preference
+  const [theme, setTheme] = useState(
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  );
+
+  // add event listeners for system preferences changes - so the theme changes if the user changes system preferences
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = (e) => {
+      setTheme(e.matches ? 'dark' : 'light');
+    }
+
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+
+    return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
+  }, [])
+
+  // modify the dom when the theme changes 
+  useEffect(() => {
+    if(theme === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme])
+
+  // function to enable dark or light mode using a button
+  function handleThemeSwitch() {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
+
+  return (
+    <div className="h-screen bg-white dark:bg-black text-black dark:text-white overflow-hidden overflow-y-scroll">
+      <button className="p-4 bg-green-400 rounded-3xl hidden" onClick={handleThemeSwitch}>Dark Mode</button>
+    </div>
+  )
+}
+
+export default App
