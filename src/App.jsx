@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import Header from "./layouts/Header";
+import Cursor from "./components/Cursor";
 
 function App() {
 
@@ -34,7 +36,9 @@ function App() {
   }
 
   return (
-    <div className="h-screen bg-white dark:bg-black text-black dark:text-white overflow-hidden overflow-y-scroll">
+    <div className="h-screen bg-white dark:bg-black text-black dark:text-white overflow-hidden overflow-y-scroll relative">
+      <Cursor />
+      <Header/>
       <button className="p-4 bg-green-400 rounded-3xl hidden" onClick={handleThemeSwitch}>Dark Mode</button>
     </div>
   )
