@@ -6,7 +6,15 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'btn-dark': 'rgb(39, 39, 42)', 
+        'btn-white': 'rgb(228, 228, 231)',
+      },
+      fontFamily: {
+        sans: ['Syne', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }

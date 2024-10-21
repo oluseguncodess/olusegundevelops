@@ -20,7 +20,7 @@ export default function Cursor() {
     }, [])
     
     return(
-        <div className={`cursor absolute w-[20px] h-[20px] bg-red-800 rounded-full pointer-events-none transition-transform ease-linear duration-100 ${isVisible ? '' : 'hidden'}`} id="mouseCursor">
+        <div className={`cursor absolute w-[15px] h-[15px] bg-red-800 rounded-md pointer-events-none transition-transform ease-linear duration-100 ${isVisible ? '' : 'hidden'}`} id="mouseCursor">
         </div>
     );
 }
