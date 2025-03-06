@@ -9,7 +9,7 @@ export default function Header(props) {
         return componet
     });
 
-    const menuLinks = [{id:1, to: "about", text: 'About'}, {id:2, to: "about", text: 'Experience'}, {id:3, to: "about", text: 'Projects'}, {id:4, to: "about", text: 'Contact'}]
+    const menuLinks = [{id:1, to: "about", text: 'About'}, {id:2, to: "about", text: 'Projects'}, {id:3, to: "about", text: 'Contact'}]
 
     const displayMenuLinks = menuLinks.map(link => <Link key={link.id} to={`${link.to}`} className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-500 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300 after:delay-200 pb-[5px] text-base dark:text-gray-200 tracking-wide leading-5 cursor-pointer">{link.text}</Link>) 
     

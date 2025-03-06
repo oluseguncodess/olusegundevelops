@@ -7,6 +7,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        'c-dark': 'rgb(163, 163, 163)',
+      },
       backgroundColor: {
         'btn-dark': 'rgb(39, 39, 42)', 
         'btn-white': 'rgb(228, 228, 231)',
