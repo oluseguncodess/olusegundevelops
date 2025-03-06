@@ -1,11 +1,14 @@
 import { Link } from "react-scroll";
 import socialcon from '../data/Socialcon'
 import Socials from "../components/Socials";
+import { ThemeContext } from "../store/themeContext";
+import { useContext } from "react";
 
-/* eslint-disable react/prop-types */
-export default function Header(props) {
+export default function Header() {
+    const {theme, handleThemeSwitch} = useContext(ThemeContext)
+
     const socialIcon = socialcon.map(social => {
-        const componet = <Socials key={social.id} {...social} {...props}/>
+        const componet = <Socials key={social.id} {...social}/>
         return componet
     });
 
@@ -22,11 +25,11 @@ export default function Header(props) {
                 </div>
                 <div className="flex"> 
                     {socialIcon}
-                    <button className={`h-9 w-9 p-2 ${props.parentTheme === 'light' ? 'hover:bg-btn-white' : 'hover:bg-btn-dark'} transition-colors duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-md mr-1`} onClick={props.handleThemeSwitch}>
-                        <img src={props.parentTheme === 'light' ? '../images/sun-dark.svg' : '../images/moon-light.svg'} alt="dark-light mode" />
+                    <button className={`h-9 w-9 p-2 ${theme === 'light' ? 'hover:bg-btn-white' : 'hover:bg-btn-dark'} transition-colors duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-md mr-1`} onClick={handleThemeSwitch}>
+                        <img src={theme === 'light' ? '../images/sun-dark.svg' : '../images/moon-light.svg'} alt="dark-light mode" />
                     </button>
-                    <button className={`h-9 w-9 p-2 ${props.parentTheme === 'light' ? 'hover:bg-btn-white' : 'hover:bg-btn-dark'} transition-colors duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-md sm:hidden`}>
-                    <img src={props.parentTheme === 'light' ? '../images/hamburger-menu-dark.svg' : '../images/hamburger-menu-light.svg'} alt="hamburger-menu" />
+                    <button className={`h-9 w-9 p-2 ${theme=== 'light' ? 'hover:bg-btn-white' : 'hover:bg-btn-dark'} transition-colors duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-md sm:hidden`}>
+                    <img src={theme === 'light' ? '../images/hamburger-menu-dark.svg' : '../images/hamburger-menu-light.svg'} alt="hamburger-menu" />
                     </button>
                 </div>
             </nav>
