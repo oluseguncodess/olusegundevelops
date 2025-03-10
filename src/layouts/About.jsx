@@ -1,6 +1,7 @@
 import ReachMeBtn from "../components/ReachMeBtn";
-
 /* eslint-disable react/no-unescaped-entities */
+// import ResumeBtn from "../components/ResumeBtn";
+
 export default function About() {
     return (
         <section className="mt-28 sm:mt-[180px] w-4/5 mx-auto py-5">
