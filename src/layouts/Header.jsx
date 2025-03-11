@@ -18,7 +18,7 @@ export default function Header() {
     
     return (
         <header className="py-3 px-4 sm:px-8 supports-backdrop-blur:bg-[hsl(240_10%_3.9%_/_0.6)] fixed top-0 left-0 z-50 w-full border-b border-gray-500 backdrop-blur mb-[69px] flex justify-center">
-            <nav className="navbar flex items-center w-full justify-center">
+            <nav className="navbar flex items-center w-full justify-between">
                 <img src="../images/kratos.png" alt="logo" className="w-11 h-11 sm:w-13 sm:h-13" />
                 <div className="desktopMenu sm:flex gap-6 hidden mx-auto">
                     {displayMenuLinks}
