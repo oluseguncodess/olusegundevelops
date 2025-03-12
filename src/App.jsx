@@ -2,6 +2,7 @@ import Header from "./layouts/Header";
 import Cursor from "./components/Cursor";
 import About from "./layouts/About";
 import ThemeContextProvider from "./store/ThemeContextProvider";
+import Projects from "./layouts/Projects";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Cursor />
         <Header />
         <About />
+        <Projects/>
       </ThemeContextProvider>
     </div>
   );
