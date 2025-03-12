@@ -1,26 +1,35 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef } from "react";
 
 export default function Cursor() {
-    const [isVisible, setIsVisible] = useState(false)
+    const cursorRef = useRef(null);
 
     useEffect(() => {
-        const cursor = document.querySelector('#mouseCursor')
-
         const handleMouseMove = (e) => {
-            cursor.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`
-            setIsVisible(true)      
-        }
+            if (cursorRef.current) {
+                cursorRef.current.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+                cursorRef.current.style.opacity = "1";
+            }
+        };
 
-        document.addEventListener('mousemove', handleMouseMove);
+        const handleMouseLeave = () => {
+            if (cursorRef.current) {
+                cursorRef.current.style.opacity = "0";
+            }
+        };
 
-        // clean-up memory
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseleave", handleMouseLeave);
+
         return () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-        }
-    }, [])
-    
-    return(
-        <div className={`cursor absolute w-[15px] h-[15px] bg-red-800 rounded-md pointer-events-none transition-transform ease-linear duration-100 ${isVisible ? '' : 'hidden'}`} id="mouseCursor">
-        </div>
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseleave", handleMouseLeave);
+        };
+    }, []);
+
+    return (
+        <div
+            ref={cursorRef}
+            className="cursor fixed w-[15px] h-[15px] bg-red-800 rounded-md pointer-events-none transition-transform ease-linear duration-100 opacity-0"
+        />
     );
 }
