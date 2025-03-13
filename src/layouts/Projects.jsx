@@ -9,12 +9,12 @@ import { ThemeContext } from "../store/themeContext";
 export default function Projects() {
   const { theme } = useContext(ThemeContext);
   return (
-    <section className="w-full md:max-w-[1400px] mx-auto py-5 mt-16">
+    <section className="w-full md:max-w-[1400px] mx-auto py-5 mt-16" id="projects">
       <span className="text-center">
-        <h2 className="text-[20vmin] font-bold text-black inline-block bg-clip-text bg-gradient-to-r from-[#fafafa99] to-[#fafafa99] [text-wrap:nowrap] [letter-spacing:calc(1em/16)] [padding:calc(1em/32)] [-webkit-text-stroke-width:calc(1em/16)] [-webkit-text-stroke-color:transparent] relative w-full mt-20 justify-center text-center text-9xl">
+        <h2 className="text-[16vmin] md:[20vmin] font-bold text-black inline-block bg-clip-text bg-gradient-to-r from-[#fafafa99] to-[#fafafa99] [text-wrap:nowrap] [letter-spacing:calc(1em/16)] [padding:calc(1em/32)] [-webkit-text-stroke-width:calc(1em/16)] [-webkit-text-stroke-color:transparent] relative w-full md:mt-20 mt-13 justify-center text-center text-9xl">
           Projects
         </h2>
-        <p className="my-10">
+        <p className="my-10 px-1 md:px-0">
           Here are some of the exciting projects I&apos;ve worked on.
         </p>
       </span>
