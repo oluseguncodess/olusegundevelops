@@ -15,7 +15,7 @@ export default function Header() {
   const menuLinks = [
     { id: 1, text: "About", link: "#about" },
     { id: 2, text: "Projects", link: "#projects" },
-    { id: 3, text: "Contact", link: "#contact" },
+    // { id: 3, text: "Contact", link: "#contact" },
   ];
 
   const displayMenuLinks = menuLinks.map((link) => (
@@ -39,7 +39,7 @@ export default function Header() {
           alt="logo"
           className="w-11 h-11 sm:w-13 sm:h-13"
         />
-        <div className="desktopMenu sm:flex gap-6 hidden mx-auto">
+        <div className="desktopMenu sm:flex gap-10 hidden mx-auto">
           {displayMenuLinks}
         </div>
         <div className="flex">
