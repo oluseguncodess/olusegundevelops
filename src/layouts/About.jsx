@@ -4,7 +4,7 @@ import ResumeBtn from "../components/ResumeBtn";
 
 export default function About() {
     return (
-        <section className="mt-28 sm:mt-40 w-full max-w-[1400px] mx-auto px-8" id="about">
+        <section className="mt-28 sm:mt-40 w-full max-w-[1400px] mx-auto px-8 scroll-m-48" id="about">
             <div className="flex flex-col items-center">
                 <span className="dark:text-white font-medium border px-4 py-1 rounded-full">
                     Hello 👋🏾 ,
