@@ -29,7 +29,7 @@ export default function Cursor() {
     return (
         <div
             ref={cursorRef}
-            className="cursor fixed w-[15px] h-[15px] bg-red-800 rounded-md pointer-events-none transition-transform ease-linear duration-100 opacity-0"
+            className="cursor fixed w-[15px] h-[15px] bg-red-800 rounded-md pointer-events-none transition-transform ease-linear duration-100 opacity-0 hidden sm:block"
         />
     );
 }

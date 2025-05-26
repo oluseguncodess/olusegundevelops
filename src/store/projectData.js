@@ -4,7 +4,7 @@ import quizAppImg from "../assets/quiz-app.png";
 
 export const projectData = [
   {
-    id: 1,
+    id: 'a1',
     img: movieQueryImg,
     name: "Movie query",
     status: "completed",
@@ -15,7 +15,7 @@ export const projectData = [
     liveSite: "https://movie-query-five.vercel.app/",
   },
   {
-    id: 2,
+    id: 'a2',
     img: domesticViolenceImg,
     name: "Domestic violence Report",
     status: "completed",
@@ -26,7 +26,7 @@ export const projectData = [
     liveSite: "https://domestic-violence-reporting-tool.vercel.app/",
   },
   {
-    id: 3,
+    id: 'a3',
     img: quizAppImg,
     name: "Quiz App",
     status: "completed",
