@@ -2,10 +2,16 @@
 import socialcon from "../data/Socialcon";
 import Socials from "../components/Socials";
 import { ThemeContext } from "../store/themeContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import MobileNav from "../components/MobileNav";
 
 export default function Header() {
   const { theme, handleThemeSwitch } = useContext(ThemeContext);
+  const [toggle, setToggle] = useState(false);
+
+  function handleToggle() {
+    setToggle((tog) => !tog);
+  }
 
   const socialIcon = socialcon.map((social) => {
     const componet = <Socials key={social.id} {...social} />;
@@ -63,6 +69,7 @@ export default function Header() {
             className={`h-9 w-9 p-2 ${
               theme === "light" ? "hover:bg-btn-white" : "hover:bg-btn-dark"
             } transition-colors duration-150 ease-[cubic-bezier(0.4,0,0.2,1)] rounded-md sm:hidden`}
+            onClick={handleToggle} disabled={toggle}
           >
             <img
               src={
@@ -75,6 +82,7 @@ export default function Header() {
           </button>
         </div>
       </nav>
+      {toggle && <MobileNav setToggle={setToggle}/>}
     </header>
   );
 }

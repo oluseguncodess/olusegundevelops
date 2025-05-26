@@ -51,7 +51,7 @@ export default function Projects() {
                   {project.stack.map((stack) => {
                     return (
                       <span
-                        key={project.id}
+                        key={`${project.id}-${stack}`}
                         className={`${
                           theme === "light" ? "border-black" : "border-white"
                         } block rounded-full border px-3 py-1 text-xs`}
