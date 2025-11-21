@@ -1,6 +1,7 @@
 import movieQueryImg from "../assets/movie-query-app.png";
 import domesticViolenceImg from "../assets/domestic-violence-app.png";
 import quizAppImg from "../assets/quiz-app.png";
+import productPageImg from '../assets/product-page.png'
 
 export const projectData = [
   {
@@ -16,6 +17,17 @@ export const projectData = [
   },
   {
     id: 'a2',
+    img: productPageImg,
+    name: "Ecommerce Product Page",
+    status: "completed",
+    description:
+      "A fully responsive ecommerce product page with dynamic product showcase, interactive image gallery, and seamless add-to-cart functionality using modern web technologies.",
+    stack: ["ReactJS", "Tailwindcss", "Vercel"],
+    github: "https://github.com/oluseguncodess/product-page",
+    liveSite: "https://product-page-alpha-seven.vercel.app/",
+  },
+  {
+    id: 'a3',
     img: domesticViolenceImg,
     name: "Domestic violence Report",
     status: "completed",
@@ -26,7 +38,7 @@ export const projectData = [
     liveSite: "https://domestic-violence-reporting-tool.vercel.app/",
   },
   {
-    id: 'a3',
+    id: 'a4',
     img: quizAppImg,
     name: "Quiz App",
     status: "completed",
