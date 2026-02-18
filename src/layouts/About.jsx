@@ -10,7 +10,7 @@ export default function About() {
                     Hello 👋🏾 ,
                 </span>
                 <h1 className="text-3xl sm:text-7xl font-bold text-center my-6">I'm Olusegun ⛩</h1>
-                <img src="../images/kratos.png" alt="kratos" className="w-24 h-24 sm:w-36 sm:h-36 mb-7"/>
+                <img src="../images/segsss.png" alt="kratos" className="w-24 h-24 sm:w-36 sm:h-36 mb-7"/>
                 <p className="dark:text-gray-200 md:text-lg text-base max-w-[600px] text-center mb-16">A front-end developer who works with the React Ecosystem. I make amazing user interfaces come to life...</p>
 
                 {/* <ReachMeBtn /> */}

@@ -41,7 +41,7 @@ export default function Header() {
     >
       <nav className="navbar flex items-center w-full justify-between md:max-w-[1400px] md:px-8">
         <img
-          src="../images/kratos.png"
+          src="../images/nightwing.png"
           alt="logo"
           className="w-11 h-11 sm:w-13 sm:h-13"
         />

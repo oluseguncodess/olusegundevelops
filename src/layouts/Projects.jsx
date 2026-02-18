@@ -25,11 +25,13 @@ export default function Projects() {
               className="md:max-w-[450px] border border-red-800 rounded-md outline-none"
               key={project.id}
             >
-              <img
+             <div className="w-full h-[200px] md:h-[300px]">
+               <img
                 src={project.img}
                 alt="project-image"
-                className="w-[500px]"
+                className="h-full w-full md:object-fill"
               />
+             </div>
               <div className="p-3 md:p-5">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="font-semibold text-lg">{project.name}</h3>

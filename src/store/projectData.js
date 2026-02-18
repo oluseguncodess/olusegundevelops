@@ -1,7 +1,7 @@
 import movieQueryImg from "../assets/movie-query-app.png";
-import domesticViolenceImg from "../assets/domestic-violence-app.png";
 import quizAppImg from "../assets/quiz-app.png";
 import productPageImg from '../assets/product-page.png'
+import inventoryImg from '../assets/inventory-app.png'
 
 export const projectData = [
   {
@@ -17,6 +17,17 @@ export const projectData = [
   },
   {
     id: 'a2',
+    img: inventoryImg,
+    name: "Inventory Management Application",
+    status: "completed",
+    description:
+      "A clean, responsive web application for small businesses and side hustles to track products, manage stock levels, and handle basic inventory operations.",
+    stack: ["Typescript", "Tailwindcss", "Vercel", "NextJs", "Shadcn"],
+    github: "https://github.com/oluseguncodess/inventory-management",
+    liveSite: "https://inventory-management-hazel-one.vercel.app",
+  },
+  {
+    id: 'a3',
     img: productPageImg,
     name: "Ecommerce Product Page",
     status: "completed",
@@ -25,17 +36,6 @@ export const projectData = [
     stack: ["ReactJS", "Tailwindcss", "Vercel"],
     github: "https://github.com/oluseguncodess/product-page",
     liveSite: "https://product-page-alpha-seven.vercel.app/",
-  },
-  {
-    id: 'a3',
-    img: domesticViolenceImg,
-    name: "Domestic violence Report",
-    status: "completed",
-    description:
-      "A domestic violence reporting tool designed to provide a safe and efficient way for individuals to report incidents of domestic violence.",
-    stack: ["React", "Tailwindcss", "Vercel", "API", "React Router"],
-    github: "https://github.com/HildaPosada/Domestic-Violence-Reporting-Tool",
-    liveSite: "https://domestic-violence-reporting-tool.vercel.app/",
   },
   {
     id: 'a4',
