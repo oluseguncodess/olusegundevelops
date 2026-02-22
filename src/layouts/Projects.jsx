@@ -36,7 +36,7 @@ export default function Projects() {
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="font-semibold text-lg">{project.name}</h3>
                   <span className="flex items-center gap-2">
-                    <span className="bg-green-600 h-3 w-3 block rounded-full animate-pulse"></span>
+                    <span className="bg-green-600 h-3 w-3 block rounded-full animate-ping"></span>
                     <p className="text-sm">{project.status}</p>
                   </span>
                 </div>
